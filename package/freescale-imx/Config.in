@@ -108,6 +108,7 @@ config BR2_PACKAGE_FREESCALE_IMX_HAS_VIV_GPU
 		BR2_PACKAGE_FREESCALE_IMX_PLATFORM_IMX8DXL
 
 source "package/freescale-imx/imx-alsa-plugins/Config.in"
+source "package/freescale-imx/imx-caam-keygen/Config.in"
 source "package/freescale-imx/imx-codec/Config.in"
 source "package/freescale-imx/imx-kobs/Config.in"
 source "package/freescale-imx/imx-lib/Config.in"

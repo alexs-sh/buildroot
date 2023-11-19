@@ -1,0 +1,10 @@
+config BR2_PACKAGE_IMX_CAAM_KEYGEN
+	bool "caam-keygen"
+	depends on BR2_PACKAGE_FREESCALE_IMX_PLATFORM_IMX6UL
+	help
+	  The caam-keygen utility is used to operate with black keys
+	  from user space. The app is strongly connected with the kernel
+	  version and expects version 5.15 by default. It could be
+	  buildable but not operable with other kernel versions.
+
+	  https://github.com/nxp-imx/keyctl_caam
