@@ -1,0 +1,28 @@
+config BR2_PACKAGE_UUTILS_COREUTILS
+	bool "uutils-coreutils"
+	depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
+	depends on BR2_PACKAGE_HOST_RUSTC
+	depends on BR2_PACKAGE_BUSYBOX_SHOW_OTHERS
+	help
+	  uutils is an attempt at writing universal (as in
+	  cross-platform) CLI utilities in Rust. While all programs have
+	  been implemented, some options might be missing or different
+	  behavior might be experienced.
+
+	  https://github.com/uutils/coreutils
+
+if BR2_PACKAGE_UUTILS_COREUTILS
+
+config BR2_PACKAGE_UUTILS_COREUTILS_MULTICALL
+	bool "multicall"
+	default y
+	help
+	  Build coreutils as a multi-call binary.
+
+	  Selecting 'y' will build and install a single
+	  'coreutils' binary that supports all commands.
+
+	  Selecting 'n' will build and install the utilities
+	  as separate files.
+
+endif
