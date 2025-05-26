@@ -3002,6 +3002,9 @@ F:	package/lrzip/
 N:	Sam Voss <sam.voss@gmail.com>
 F:	package/ripgrep/
 
+N:	Alexander Shirokov <shirokovalexs@gmail.com>
+F:	package/uutils-coreutils
+
 N:	Sébastien Szymanski <sebastien.szymanski@armadeus.com>
 F:	board/armadeus/
 F:	configs/armadeus*
