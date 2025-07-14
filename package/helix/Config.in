@@ -1,0 +1,8 @@
+config BR2_PACKAGE_HELIX
+	bool "helix"
+	depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
+	depends on BR2_PACKAGE_HOST_RUSTC
+	help
+	  A Kakoune / Neovim inspired editor, written in Rust.
+
+	  https://helix-editor.com/
