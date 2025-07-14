@@ -2906,6 +2906,7 @@ menu "Text editors and viewers"
 	source "package/nnn/Config.in"
 	source "package/uemacs/Config.in"
 	source "package/vim/Config.in"
+	source "package/helix/Config.in"
 endmenu
 
 endmenu
