@@ -1,0 +1,9 @@
+config BR2_PACKAGE_NNN
+	bool "nnn"
+	depends on BR2_PACKAGE_READLINE
+	depends on BR2_PACKAGE_NCURSES_WCHAR
+	help
+	  nnn is a full-featured terminal file manager. It's tiny,
+	  nearly 0-config and incredibly fast.
+
+	  https://github.com/jarun/nnn
