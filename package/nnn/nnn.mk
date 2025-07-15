@@ -14,8 +14,7 @@ NNN_BIN = /usr/bin/nnn
 
 define NNN_BUILD_CMDS
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) \
-	CC="$(TARGET_CC)" CCFLAGS="$(TARGET_CFLAGS)" \
-	"$(TARGET_LDFLAGS)"
+	CC="$(TARGET_CC)" CCFLAGS="$(TARGET_CFLAGS)"
 endef
 
 # Install the binaries, manuals, and other items described in the Makefile to the staging directory
