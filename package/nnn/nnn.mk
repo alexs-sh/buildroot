@@ -8,7 +8,7 @@ NNN_VERSION = v5.1
 NNN_LICENSE = BSD-2-Clause
 NNN_LICENSE_FILES = LICENSE
 NNN_SITE = $(call github,jarun,nnn,$(NNN_VERSION))
-NNN_DEPENDENCIES = readline ncurses
+NNN_DEPENDENCIES = readline ncurses host-pkgconf
 NNN_INSTALL_STAGING = YES
 NNN_BIN = /usr/bin/nnn
 
