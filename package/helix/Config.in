@@ -2,6 +2,7 @@ config BR2_PACKAGE_HELIX
 	bool "helix"
 	depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
 	depends on BR2_PACKAGE_HOST_RUSTC
+	select BR2_PACKAGE_HOST_PKGCONF
 	help
 	  A Kakoune / Neovim inspired editor, written in Rust.
 
