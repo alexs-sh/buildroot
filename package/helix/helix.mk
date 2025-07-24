@@ -5,7 +5,8 @@
 ################################################################################
 
 HELIX_VERSION = 25.07.1
-HELIX_SITE = $(call github,helix-editor,helix,$(HELIX_VERSION))
+HELIX_SITE = https://github.com/helix-editor/helix.git
+HELIX_SITE_METHOD = git
 HELIX_LICENSE = MPL-2.0
 HELIX_LICENSE_FILES = LICENSE
 
