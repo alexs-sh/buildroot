@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-HELIX_VERSION = 25.07.1
-HELIX_SITE = https://github.com/helix-editor/helix.git
+HELIX_VERSION = 1f9917189301f0cad5210d89ec20e49643191f69
+HELIX_SITE = https://github.com/alexs-sh/helix.git
 HELIX_SITE_METHOD = git
 HELIX_LICENSE = MPL-2.0
 HELIX_LICENSE_FILES = LICENSE
