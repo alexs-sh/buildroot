@@ -1,0 +1,35 @@
+From fbeefc64cc820614a11fcbf2b8beee9b71834854 Mon Sep 17 00:00:00 2001
+From: Alexander Shirokov <shirokovalexs@gmail.com>
+Date: Fri, 25 Jul 2025 12:24:37 +0200
+Subject: [PATCH] build.rs:remove hardcoded /usr/local/lib
+
+This is a workaround for hardcoded paths which could trigger build issues, such
+as:
+
+  = note: aarch64-none-linux-gnu-gcc: ERROR: unsafe header/library path
+    used in cross-compilation: '-L' '/usr/local/lib'
+
+Signed-off-by: Alexander Shirokov <shirokovalexs@gmail.com>
+Upstream: N/A
+---
+ build.rs | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/build.rs b/build.rs
+index 6d6bdff..619aab9 100644
+--- a/build.rs
++++ b/build.rs
+@@ -56,8 +56,8 @@ fn main() {
+ 
+     let mut build = cc::Build::new();
+     // Add to the default library search path
+-    build.flag_if_supported("-L/usr/local/lib/");
+-    rsconf::add_library_search_path("/usr/local/lib");
++    // build.flag_if_supported("-L/usr/local/lib/");
++    // rsconf::add_library_search_path("/usr/local/lib");
+     let mut target = Target::new_from(build).unwrap();
+     // Keep verbose mode on until we've ironed out rust build script stuff
+     target.set_verbose(true);
+-- 
+2.50.1
+

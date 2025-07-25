@@ -1,0 +1,12 @@
+config BR2_PACKAGE_FISH
+	bool "fish"
+	depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
+	depends on BR2_PACKAGE_HOST_RUSTC
+	help
+	  fish - the friendly interactive shell.
+
+	  fish includes features like syntax highlighting,
+	  autosuggest-as-you-type, and fancy tab completions
+	  that just work, with no configuration required.
+
+	  https://fishshell.com/
