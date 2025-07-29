@@ -6,3 +6,25 @@ config BR2_PACKAGE_HELIX
 	  A Kakoune / Neovim inspired editor, written in Rust.
 
 	  https://helix-editor.com/
+
+if BR2_PACKAGE_HELIX
+
+config BR2_PACKAGE_HELIX_INSTALL_THEMES
+	bool "install themes"
+	default y
+	help
+	  Install color themes. This option adds about 1MB of data
+	  to /usr/lib/helix/runtime
+
+config BR2_PACKAGE_HELIX_INSTALL_GRAMMARS
+	bool "build grammars"
+	default n
+	help
+	  Use this flag to build and install tree-sitter grammars.
+	  This option adds about 200MB (all grammars) of data to
+	  /usr/lib/helix/runtime.
+
+	  PLEASE NOTE: The process is currently unstable. Enable this
+	  flag only if you intend to stabilize and improve the grammar
+	  build process.
+endif
