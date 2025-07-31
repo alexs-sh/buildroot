@@ -1,0 +1,8 @@
+config BR2_PACKAGE_AICHAT
+	bool "aichat"
+	depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
+	depends on BR2_PACKAGE_HOST_RUSTC
+	help
+	  TBC
+
+	  https://github.com/sigoden/aichat
