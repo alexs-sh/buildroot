@@ -15,7 +15,7 @@ HELIX_RUNTIME_DIR = usr/share/helix/runtime
 # NOTE: Building grammars is currently unstable and will most likely lead to
 # a broken build. Use with caution.
 ifeq ($(BR2_PACKAGE_HELIX_INSTALL_GRAMMARS),y)
-HELIX_CARGO_ENV += CRATE_CC_NO_DEFAULTS=1
+HELIX_CARGO_ENV += CRATE_CC_NO_DEFAULTS=1 TARGET=$(TARGET_CROSS)
 else
 HELIX_CARGO_ENV += HELIX_DISABLE_AUTO_GRAMMAR_BUILD=1
 endif
