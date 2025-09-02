@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-HELIX_VERSION = 1f9917189301f0cad5210d89ec20e49643191f69
+HELIX_VERSION = cfb5158cd1b3e5e1962eda66e673c0c35b786046
 HELIX_SITE = https://github.com/alexs-sh/helix.git
 HELIX_SITE_METHOD = git
 HELIX_LICENSE = MPL-2.0
