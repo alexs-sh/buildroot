@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-UUTILS_COREUTILS_VERSION = 0.1.0
+UUTILS_COREUTILS_VERSION = 0.2.2
 UUTILS_COREUTILS_SITE = $(call github,uutils,coreutils,$(UUTILS_COREUTILS_VERSION))
 UUTILS_COREUTILS_LICENSE = MIT
 UUTILS_COREUTILS_LICENSE_FILES = LICENSE
