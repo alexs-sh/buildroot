@@ -1,8 +1,8 @@
 config BR2_PACKAGE_UUTILS_COREUTILS
 	bool "uutils-coreutils"
 	depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
-	depends on BR2_PACKAGE_HOST_RUSTC
 	depends on BR2_PACKAGE_BUSYBOX_SHOW_OTHERS
+	select BR2_PACKAGE_HOST_RUSTC
 	help
 	  uutils coreutils is a cross-platform reimplementation of the
 	  GNU coreutils in Rust.
