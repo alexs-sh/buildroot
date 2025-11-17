@@ -25,7 +25,6 @@ config BR2_PACKAGE_HELIX_INSTALL_THEMES
 
 config BR2_PACKAGE_HELIX_INSTALL_GRAMMARS
 	bool "build grammars"
-	default n
 	help
 	  Use this flag to build and install tree-sitter grammars.
 	  This option adds about 200MB (all grammars) of data to
