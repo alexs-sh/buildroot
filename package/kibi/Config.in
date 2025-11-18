@@ -8,3 +8,13 @@ config BR2_PACKAGE_KIBI
 	  in less than 1024 lines of Rust with minimal dependencies.
 
 	  https://github.com/ilai-deutel/kibi
+
+if BR2_PACKAGE_KIBI
+
+config BR2_PACKAGE_KIBI_SYNTAX_HIGHLIGHTING
+	bool "syntax highlighting"
+	default y
+	help
+	  Install files to enable syntax highlighting. This option adds
+	  200 KB of data to /usr/share/
+endif
