@@ -4,20 +4,29 @@
 #
 ################################################################################
 
-UUTILS_COREUTILS_VERSION = 0.5.0
+UUTILS_COREUTILS_VERSION = 0.6.0
 UUTILS_COREUTILS_SITE = $(call github,uutils,coreutils,$(UUTILS_COREUTILS_VERSION))
 UUTILS_COREUTILS_LICENSE = MIT
 UUTILS_COREUTILS_LICENSE_FILES = LICENSE
 
 # The list of default utilities is used when no specific instructions are provided
 # from the configuration.
-UUTILS_COREUTILS_DEFAULT_UTILITIES = \
+#
+# feat_common_core in Cargo.toml
+UUTILS_COREUTILS_CORE_UTILITIES = \
 	base32 \
 	base64 \
-	basenc \
 	basename \
+	basenc \
 	cat \
 	cksum \
+	b2sum \
+	md5sum \
+	sha1sum \
+	sha224sum \
+	sha256sum \
+	sha384sum \
+	sha512sum \
 	comm \
 	cp \
 	csplit \
@@ -28,6 +37,7 @@ UUTILS_COREUTILS_DEFAULT_UTILITIES = \
 	dir \
 	dircolors \
 	dirname \
+	du \
 	echo \
 	env \
 	expand \
@@ -36,7 +46,6 @@ UUTILS_COREUTILS_DEFAULT_UTILITIES = \
 	false \
 	fmt \
 	fold \
-	hashsum \
 	head \
 	join \
 	link \
@@ -48,7 +57,6 @@ UUTILS_COREUTILS_DEFAULT_UTILITIES = \
 	mv \
 	nl \
 	numfmt \
-	nproc \
 	od \
 	paste \
 	pr \
@@ -67,21 +75,31 @@ UUTILS_COREUTILS_DEFAULT_UTILITIES = \
 	sort \
 	split \
 	sum \
-	sync \
 	tac \
 	tail \
 	tee \
 	test \
+	touch \
 	tr \
 	true \
 	truncate \
 	tsort \
 	unexpand \
 	uniq \
+	unlink \
 	vdir \
 	wc \
-	whoami \
 	yes
+
+# feat_Tier1 in Cargo.toml
+UUTILS_COREUTILS_DEFAULT_UTILITIES = \
+	$(UUTILS_COREUTILS_CORE_UTILITES) \
+	arch \
+	hostname \
+	nproc \
+	sync \
+	uname \
+	whoami
 
 # Track 'debug' and 'release' builds. This is needed as Cargo will
 # save them into different directories according to the build type.
