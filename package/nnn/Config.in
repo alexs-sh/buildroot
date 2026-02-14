@@ -1,9 +1,11 @@
 config BR2_PACKAGE_NNN
 	bool "nnn"
 	depends on BR2_USE_MMU # fork
+	depends on BR2_TOOLCHAIN_HAS_ATOMIC
+	depends on BR2_TOOLCHAIN_HAS_THREADS
 	# Building nnn without widechar/UTF support is theoretically
 	# possible, but in practice it leads to unstable builds.
-	# That’s why the WCHAR dependency is here.
+	# That's why the WCHAR dependency is here.
 	depends on BR2_USE_WCHAR
 	select BR2_PACKAGE_NCURSES
 	select BR2_PACKAGE_NCURSES_WCHAR
