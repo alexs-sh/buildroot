@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-NNN_VERSION = 5.1
+NNN_VERSION = 5.2
 NNN_LICENSE = BSD-2-Clause
 NNN_LICENSE_FILES = LICENSE
 NNN_SITE = $(call github,jarun,nnn,v$(NNN_VERSION))
@@ -15,10 +15,12 @@ NNN_MAKE_FLAGS = \
 	CFLAGS_OPTIMIZATION= \
 	PREFIX=/usr
 
+# Must be passed in env so it can be appended to by the Makefile
+NNN_MAKE_ENV += LDLIBS="-latomic"
+
 ifeq ($(BR2_TOOLCHAIN_USES_GLIBC),)
 NNN_DEPENDENCIES += musl-fts
-# Must be passed in env so it can be appended to by the Makefile
-NNN_MAKE_ENV += LDLIBS="-lfts"
+NNN_MAKE_ENV += LDLIBS="-lfts -latomic"
 endif
 
 ifeq ($(BR2_PACKAGE_READLINE),y)
