@@ -1,6 +1,7 @@
 config BR2_PACKAGE_AICHAT
 	bool "aichat"
 	depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
+	depends on !BR2_i386 || (BR2_X86_CPU_HAS_SSE && BR2_X86_CPU_HAS_SSE2)
 	select BR2_PACKAGE_HOST_RUSTC
 	help
 	  AIChat helps seamlessly integrate different LLM models,
