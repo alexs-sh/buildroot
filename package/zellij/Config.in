@@ -1,10 +1,8 @@
 config BR2_PACKAGE_ZELLIJ
 	bool "zellij"
-	# Zellij uses the cranelift crate which has architecure
-	# dependencies. Specify them explicitly. See details here:
-	# https://docs.rs/cranelift-codegen/0.122.0/cranelift_codegen/
-	depends on BR2_x86_64 || BR2_x86_i686 || BR2_aarch64
 	depends on BR2_PACKAGE_HOST_RUSTC_TARGET_ARCH_SUPPORTS
+	# zellij unconditionally uses AtomicU64
+	depends on BR2_PACKAGE_HOST_RUSTC_TARGET_HAS_ATOMIC_U64
 	select BR2_PACKAGE_HOST_RUSTC
 	help
 	  An advanced terminal multiplexer with batteries included.
